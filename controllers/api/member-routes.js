@@ -1,5 +1,4 @@
 const router = require('express').Router();
-const { authenticate } = require('../../config/connection');
 const { User } = require('../../models');
 const authenticator = require('../../utils/authenticator');
 
@@ -36,7 +35,7 @@ router.get('/:id', (req, res) => {
 });
 
 //create a new user
-router.post('/', authenticate, (req, res) => {
+router.post('/', authenticator, (req, res) => {
     User.create({
         username: req.body.username,
         email: req.body.email,
