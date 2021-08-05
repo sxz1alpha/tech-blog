@@ -1,0 +1,9 @@
+<article class="post">
+    <h5>
+        {{title}}
+        <span>Posted by {{post.user_id}} on {{format_date post.created_at}}</span>
+    </h5>
+    <div class="post-text">
+       <a href="/single-post/{{post.id}}">{{post.contents}}</a> 
+    </div>  
+</article>
