@@ -5,8 +5,8 @@ const authenticator = require('../../utils/authenticator');
 //get all posts
 router.get( '/', (req, res) => {
     Post.findAll({
-        attributes: ['id', 'title', 'contents', 'created_at'],
-        order:[['created_at', 'DESC']],
+        attributes: ['id', 'title', 'contents', 'createdAt'],
+        order:[['createdAt', 'DESC']],
         include: [
             {
                 model: User,
@@ -24,7 +24,7 @@ router.get( '/', (req, res) => {
 //get a single post by id
 router.get('/:id', (req, res) => {
     Post.findByPk(req.params.id, {
-        attributes: ['id', 'title', 'contents', 'created_at'],
+        attributes: ['id', 'title', 'contents', 'createdAt'],
         include: [
             {
                 model: User,
