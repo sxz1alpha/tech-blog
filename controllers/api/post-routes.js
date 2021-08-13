@@ -5,7 +5,7 @@ const authenticator = require('../../utils/authenticator');
 //get all posts
 router.get( '/', (req, res) => {
     Post.findAll({
-        attributes: ['id', 'title', 'contents', 'createdAt'],
+        attributes: ['id', 'title', 'text', 'createdAt'],
         order:[['createdAt', 'DESC']],
         include: [
             {
@@ -24,7 +24,7 @@ router.get( '/', (req, res) => {
 //get a single post by id
 router.get('/:id', (req, res) => {
     Post.findByPk(req.params.id, {
-        attributes: ['id', 'title', 'contents', 'createdAt'],
+        attributes: ['id', 'title', 'text', 'createdAt'],
         include: [
             {
                 model: User,
@@ -50,7 +50,7 @@ router.get('/:id', (req, res) => {
 router.post('/', authenticator, (req, res) => {
     Post.create({
         title: req.body.title,
-        contents: req.body.contents,
+        text: req.body.text,
         user_id: req.session.user_id
     })
     .then(dbPostData => res.json(dbPostData))
@@ -65,7 +65,7 @@ router.put('/:id', authenticator, (req, res) => {
     Post.update(
         {
             title: req.body.title,
-            contents: req.body.contents
+            text: req.body.text
         },
         {
             where: {

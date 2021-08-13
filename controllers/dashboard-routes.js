@@ -13,7 +13,7 @@ router.get('/', authenticator, (req, res) => {
             'id',
             'title',
             'createdAt',
-            'contents'
+            'text'
         ],
         include: [
             {
