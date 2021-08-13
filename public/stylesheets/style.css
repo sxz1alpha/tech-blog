@@ -7,7 +7,26 @@ body {
     padding:0;
     margin: 0;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    color: rgb(62, 79, 112);
+    color: cornsilk;
+    background-color: seagreen;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#form {
+    border-style: solid;
+    border-width: 2px;
+    border-color: rgb(26, 26, 41);
+    width: 80%;
+}
+
+.form-container {
+    margin: 15px;
+    width: 100%;
 }
 
 a {
@@ -20,25 +39,50 @@ a:hover {
     color: rgb(0, 225, 255);
 }
 
+.header-wrapper {
+    width: 100%;
+    background-color: rgb(26, 26, 41);
+}
+
+.header-items {
+    margin-left: 10px;
+}
+
+.left {
+    display: flex;
+    justify-content: start;
+}
+
+nav {
+    display: flex;
+    justify-content: space-evenly;
+    
+}
+
+nav a {
+    margin-left: 15px;
+}
+
+header {
+    margin-left: 10px;
+}
+
 button {
     background-color: rgb(26, 26, 41);
     border: .5;
-    padding: 2%;
     color:rgb(62, 79, 112);
     font-weight:bold;
-    border-radius: 15px;
+    border-radius: 10px;
+    width: 20%;
 }
 
 button:hover {
     background-color: salmon;
 }
 
-.posts {
-    margin: 0%;
-    padding: 0%;
-}
 textarea, input {
-    border-radius: 15px;
+    height: 25px;
+    width: 90%;
     border: .5px solid rgb(166, 216, 216);
 }
 
@@ -47,6 +91,6 @@ textarea:focus, input:focus {
 }
 
 textarea {
-    min-width: 42%;
+    min-width: 100%;
     min-height: 100px;
 }
