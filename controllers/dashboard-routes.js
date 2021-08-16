@@ -39,8 +39,5 @@ router.get('/', authenticator, (req, res) => {
     });
 });
 
-router.get('/post', authenticator, (req, res) => {
-    res.render('addPost', { loggedIn: true });
-});
 
 module.exports = router;

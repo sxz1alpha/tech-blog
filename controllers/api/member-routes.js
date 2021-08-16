@@ -35,7 +35,7 @@ router.get('/:id', (req, res) => {
 });
 
 //create a new user
-router.post('/', authenticator, (req, res) => {
+router.post('/', (req, res) => {
     User.create({
         username: req.body.username,
         password: req.body.password
