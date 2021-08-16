@@ -1,9 +1,11 @@
 <article class="post">
+    <div class="post-box h-15">
     <h5>
-        {{title}}
+        <a href="/single-post/{{id}}">{{title}}</a>
         <span>Posted by {{user.username}} on {{format_date createdAt}}</span>
     </h5>
     <div class="post-text">
-       <a href="/single-post/{{id}}">{{text}}</a> 
+       <a>{{text}}</a> 
     </div>  
+    </div>
 </article>

@@ -15,6 +15,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 100%;
+    width: 100%;
 }
 
 #form {
@@ -29,10 +31,41 @@ body {
     width: 100%;
 }
 
+ol li {
+    list-style-type: none;
+}
 a {
     color:rgb(166, 216, 216);
     font-weight: bold;
     transition: color .2s;
+}
+
+.post-box {
+    background-color:  rgb(26, 26, 41);
+    margin: 5px;
+}
+
+.post-box h5 {
+    margin-left: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.post-box h5 span {
+    display: flex;
+    justify-content: end;
+    margin-right: 10px;
+}
+
+.post-box span {
+    justify-content: flex-end;
+    width: 50%;
+}
+.post-text {
+    background-color: seagreen;
+    border-style: solid;
+    border-color: rgb(26, 26, 41);
+    height: 20%;
 }
 
 a:hover {
@@ -67,10 +100,15 @@ header {
     margin-left: 10px;
 }
 
+section {
+    display: grid;
+    grid-template-rows: 2;
+}
+
 button {
     background-color: rgb(26, 26, 41);
     border: .5;
-    color:rgb(62, 79, 112);
+    color: seagreen;
     font-weight:bold;
     border-radius: 10px;
     width: 20%;

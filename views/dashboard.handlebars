@@ -1,18 +1,20 @@
-<section>
-    <h1>Welcome to the Dashboard</h1>
+<section class="d-flex align-items-center row">
+    <h1 class="p-2">Welcome to the Dashboard!</h1>
 </section>
 
 {{#if posts.length }}
-<section>
-    <h2>Your Posts</h2>
-    <ol>
+<section class="row">
+    <h2 class="col-12">Your Posts</h2>
+    <ol class="col-12">
         {{#each posts as |post|}}
-        <li>
+        <li class="col">
             {{> post-info post}}
         </li>
         {{/each}}
     </ol>
 </section>
 {{/if}}
- <button id="add-post">Add Post +</button>
-{{!-- add java script script link HERE --}}
+
+<button id="add-post">Add Post +</button>
+
+<script src="/javascript/addPostBtn.js"></script>
